@@ -105,12 +105,12 @@ links_html = """
     <h3 style="background-color: #FF6961; color: white; padding: 10px; border-radius: 5px;">🚗📈 Auto Analytics: Advanced Estimation & Deployment 🛠️</h3>
     <ul style="list-style-type: none; padding: 0;">
         <li style="margin-bottom: 10px;">
-            <a style="color: red;" href="https://github.com/huseyincenik/deep_learning/tree/main/Projects/churn_prediction_in_banking" target="_blank">
+            <a style="color: red;" href="https://github.com/huseyincenik/auto_analytics_advanced_estimation_and_deployment" target="_blank">
                 <b>Github Notebook Link</b>
             </a>
         </li>
         <li style="margin-bottom: 10px;">
-            <a style="color: blue;" href="https://www.kaggle.com/huseyincenik/churn-prediction-in-banking-deep-learning-approach" target="_blank">
+            <a style="color: blue;" href="https://www.kaggle.com/huseyincenik/auto-analytics-advanced-estimation-deployment" target="_blank">
                 <b>Kaggle Notebook Link</b>
             </a>
         </li>
@@ -125,13 +125,11 @@ links_html = """
             </a>
         </li>
         <li style="margin-bottom: 10px;">
-           <a style="color: orange;" href="https://www.linkedin.com/in/huseyincenik/" target="_blank">
+           <a style="color: orange;" href="https://auto-price-deployment.streamlit.app/" target="_blank">
                 <b>Streamlit Live</b>
             </a>
         </li>
     </ul>
-    <a href="https://www.google.com.tr" target="_blank">
-    </a>
 </div>
 """
 
