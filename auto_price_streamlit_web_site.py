@@ -5,16 +5,28 @@ import os
 from PIL import Image
 import pickle
 
-st.markdown("---")
+st.markdown("")
+
+# HTML template for the title
+html_temp = """
+<div style="background-color:tomato;padding:10px">
+<h2 style="color:white;text-align:center;">Streamlit ML Cloud App </h2>
+</div>
+"""
+# Display the title
+st.markdown(html_temp, unsafe_allow_html=True)
+st.markdown("")
+
+# Buttons layout
+buttons_row = st.columns([1, 1, 1])  # Adjusting column widths
 
 # Initialize session_state if it's the first run
 if 'data_button_clicked' not in st.session_state:
     st.session_state.data_button_clicked = False
 
 # Data button
-data_button, _, _ = st.columns(3)
 data_button_key = "data_button"  # Unique key
-if data_button.button("Data", key=data_button_key):
+if buttons_row[0].button("Data", key=data_button_key):
     st.session_state.data_button_clicked = not st.session_state.data_button_clicked
 
 # Initialize 'info_button_clicked' and 'links_button_clicked' if it's the first run
@@ -22,14 +34,6 @@ if 'info_button_clicked' not in st.session_state:
     st.session_state.info_button_clicked = False
 if 'links_button_clicked' not in st.session_state:
     st.session_state.links_button_clicked = False
-
-# HTML template
-html_temp = """
-<div style="background-color:tomato;padding:10px">
-<h2 style="color:white;text-align:center;">Streamlit ML Cloud App </h2>
-"""
-st.markdown(html_temp, unsafe_allow_html=True)
-st.markdown("")
 
 # Data display
 if st.session_state.data_button_clicked:
@@ -56,7 +60,10 @@ if st.session_state.data_button_clicked:
     st.markdown("\n\n")
 
 # Buttons
-info_button, links_button, _ = st.columns(3)
+info_button, links_button = st.columns([1, 0.111])  # Adjusting column widths
+
+# Style for centering buttons
+button_style = "text-align: center;"
 
 # Information button
 info_button_key = "info_button"  # Unique key
@@ -140,6 +147,8 @@ if st.session_state.links_button_clicked:
     st.markdown(f"<div style='text-align: center; padding: 10px; border: 1px solid #e0e0e0; border-radius: 10px;'>{links_html}</div>", unsafe_allow_html=True)
     st.markdown("\n\n")
 
+
+
 html_temp_2 = """
 <div style ="margin-top:20px"> <img src="https://miro.medium.com/v2/resize:fit:1000/1*GDjVt1eUGYVOxn1d04g7uw.jpeg" alt ="Car Image" style = "display:block;margin:auto; width:500px;height:auto;"> </div>
 """
@@ -171,7 +180,7 @@ else:
     st.error("Invalid Selection!")
 
 
-st.header("Training Dataframe is below:")
+st.header("Training Dataframe is below")
 st.markdown("---")
 st.write(df.sample(5))
 
