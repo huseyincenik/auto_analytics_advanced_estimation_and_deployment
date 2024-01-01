@@ -9,7 +9,7 @@ This project focuses on using machine learning algorithms to estimate car prices
 - Ridge Regression
 - Decision Tree
 - Random Forest
-- XGBoost (using GridSearchCV)
+- XGBoost
 
 Model evaluation, grid-search, and cross-validation were performed, resulting in the following scores:
 
